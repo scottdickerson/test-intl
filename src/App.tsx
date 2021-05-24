@@ -1,9 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {IntlProvider} from 'react-intl';
+import TestComponent from './TestComponent';
 
 function App() {
   return (
+    <IntlProvider locale="en">
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,7 +22,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <section>
+        <TestComponent string="my test" />
+      </section>
     </div>
+    </IntlProvider>
   );
 }
 
